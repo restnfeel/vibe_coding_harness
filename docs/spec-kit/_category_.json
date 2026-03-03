@@ -1,0 +1,8 @@
+{
+  "label": "Spec Kit 사용법",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "프로젝트의 요구사항과 설계를 체계적으로 정의하는 Spec Kit의 구성과 활용법"
+  }
+}

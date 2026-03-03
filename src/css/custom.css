@@ -1,0 +1,193 @@
+/**
+ * DigiLog Labs inspired color scheme
+ * Dark theme with blue-cyan gradient accents
+ */
+
+/* Light mode - still uses blue tones */
+:root {
+  --ifm-color-primary: #3B82F6;
+  --ifm-color-primary-dark: #2563EB;
+  --ifm-color-primary-darker: #1D4ED8;
+  --ifm-color-primary-darkest: #1E40AF;
+  --ifm-color-primary-light: #60A5FA;
+  --ifm-color-primary-lighter: #93C5FD;
+  --ifm-color-primary-lightest: #BFDBFE;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.1);
+  --ifm-link-color: #3B82F6;
+  --ifm-link-hover-color: #06B6D4;
+}
+
+/* Dark mode - primary design target matching digiloglabs.com */
+[data-theme='dark'] {
+  --ifm-color-primary: #60A5FA;
+  --ifm-color-primary-dark: #3B82F6;
+  --ifm-color-primary-darker: #2563EB;
+  --ifm-color-primary-darkest: #1D4ED8;
+  --ifm-color-primary-light: #93C5FD;
+  --ifm-color-primary-lighter: #BFDBFE;
+  --ifm-color-primary-lightest: #DBEAFE;
+  --ifm-background-color: #0f172a;
+  --ifm-background-surface-color: #1e293b;
+  --ifm-navbar-background-color: rgba(15, 23, 42, 0.95);
+  --ifm-footer-background-color: #0a0f1a;
+  --ifm-card-background-color: #1e293b;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.15);
+  --ifm-link-color: #60A5FA;
+  --ifm-link-hover-color: #22D3EE;
+  --ifm-heading-color: #f1f5f9;
+  --ifm-font-color-base: #cbd5e1;
+}
+
+/* Navbar styling */
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.navbar__title {
+  font-weight: 700;
+}
+
+.navbar__link:hover {
+  color: #22D3EE;
+}
+
+/* Hero banner gradient */
+.hero--primary {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 50%, #0c1527 100%);
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);
+}
+
+.hero--primary .hero__title {
+  background: linear-gradient(135deg, #3B82F6, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.hero--primary .hero__subtitle {
+  color: #94a3b8;
+  font-size: 1.3rem;
+}
+
+/* Button styling */
+.button--secondary {
+  background: linear-gradient(135deg, #3B82F6, #06B6D4);
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.button--secondary:hover {
+  background: linear-gradient(135deg, #2563EB, #0891B2);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Feature section */
+[data-theme='dark'] .features_src-components-HomepageFeatures-styles-module {
+  background: #0f172a;
+}
+
+/* Card-like hover effects for feature items */
+.col.col--4 {
+  transition: transform 0.3s ease;
+}
+
+.col.col--4:hover {
+  transform: translateY(-4px);
+}
+
+/* Footer styling */
+.footer--dark {
+  background: linear-gradient(180deg, #0a0f1a 0%, #060a12 100%);
+  border-top: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.footer__title {
+  color: #e2e8f0;
+  font-weight: 700;
+}
+
+.footer__link-item {
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: #22D3EE;
+}
+
+.footer__copyright {
+  color: #64748b;
+  border-top: 1px solid rgba(100, 116, 139, 0.2);
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+/* Scrollbar styling for dark mode */
+[data-theme='dark'] ::-webkit-scrollbar {
+  width: 8px;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Sidebar styling */
+[data-theme='dark'] .menu {
+  background: #0f172a;
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60A5FA;
+}
+
+[data-theme='dark'] .menu__link--active {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60A5FA;
+}
+
+/* Code block styling */
+[data-theme='dark'] .prism-code {
+  background: #1e293b !important;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+/* Table of Contents */
+[data-theme='dark'] .table-of-contents__link:hover,
+[data-theme='dark'] .table-of-contents__link--active {
+  color: #60A5FA;
+}
+
+/* Admonition/Alert styling */
+[data-theme='dark'] .alert {
+  background: #1e293b;
+  border-left-width: 4px;
+}
