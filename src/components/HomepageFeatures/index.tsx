@@ -56,16 +56,50 @@ function Feature({title, Svg, description}: FeatureItem) {
   );
 }
 
+type ReferenceItem = {
+  number: number;
+  title: string;
+  file: string;
+};
+
+const ReferenceList: ReferenceItem[] = [
+  {number: 1, title: 'Superpowers 기본', file: '/vibe_coding_harness/files/1.superpowers_basic.pdf'},
+  {number: 2, title: 'Spec Kit 기본', file: '/vibe_coding_harness/files/2.spec_kit_basic.pdf'},
+  {number: 3, title: 'Hybrid Harness 기본', file: '/vibe_coding_harness/files/3.hybrid_harness_basic.pdf'},
+  {number: 4, title: 'DDD Harness 기본', file: '/vibe_coding_harness/files/4.ddd_harness_basic.pdf'},
+  {number: 5, title: 'Total Harness 기본', file: '/vibe_coding_harness/files/5.total_harness_basic.pdf'},
+];
+
 export default function HomepageFeatures(): ReactNode {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <>
+      <section className={styles.features}>
+        <div className="container">
+          <div className="row">
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className={styles.references}>
+        <div className="container">
+          <Heading as="h2" className="text--center margin-bottom--lg">
+            참고자료
+          </Heading>
+          <div className="row">
+            {ReferenceList.map(({number, title, file}) => (
+              <div key={number} className="col col--2 col--offset-0 margin-bottom--md" style={{flex: '0 0 20%', maxWidth: '20%'}}>
+                <a href={file} target="_blank" rel="noopener noreferrer" className={styles.referenceCard}>
+                  <div className={styles.referenceNumber}>{number}</div>
+                  <div className={styles.referenceTitle}>{title}</div>
+                  <div className={styles.referenceDownload}>PDF 다운로드</div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

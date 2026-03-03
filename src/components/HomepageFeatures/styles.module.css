@@ -13,3 +13,56 @@
   height: 200px;
   width: 200px;
 }
+
+.references {
+  padding: 3rem 0;
+  width: 100%;
+}
+
+[data-theme='dark'] .references {
+  background: #1e293b;
+}
+
+.referenceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.03);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.referenceCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+}
+
+[data-theme='dark'] .referenceCard {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.referenceNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.referenceTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.referenceDownload {
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+  margin-top: auto;
+}
